@@ -9,9 +9,7 @@ export default function Home() {
     <>
       <Seo title="Home" />
       <Layout>
-        <div className="container mx-auto">
-          <h1 className="text-4xl">Hello World</h1>
-        </div>
+        <div className="container"></div>
       </Layout>
     </>
   );
