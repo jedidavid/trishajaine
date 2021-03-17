@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/projects",
-      "handler": "projects.find",
+      "handler": "project.find",
       "config": {
         "policies": []
       }
@@ -11,7 +11,7 @@
     {
       "method": "GET",
       "path": "/projects/count",
-      "handler": "projects.count",
+      "handler": "project.count",
       "config": {
         "policies": []
       }
@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/projects/:id",
-      "handler": "projects.findOne",
+      "handler": "project.findOne",
       "config": {
         "policies": []
       }
@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/projects",
-      "handler": "projects.create",
+      "handler": "project.create",
       "config": {
         "policies": []
       }
@@ -35,7 +35,7 @@
     {
       "method": "PUT",
       "path": "/projects/:id",
-      "handler": "projects.update",
+      "handler": "project.update",
       "config": {
         "policies": []
       }
@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/projects/:id",
-      "handler": "projects.delete",
+      "handler": "project.delete",
       "config": {
         "policies": []
       }

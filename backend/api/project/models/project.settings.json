@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "Projects",
-    "description": ""
+    "name": "Project"
   },
   "options": {
     "increments": true,
@@ -16,26 +15,21 @@
       "required": true
     },
     "description": {
-      "type": "text",
-      "required": false
+      "type": "text"
     },
     "content": {
       "type": "richtext"
     },
-    "images": {
+    "image": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
+        "files",
         "videos"
       ],
       "plugin": "upload",
-      "required": true
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
-      "required": true
+      "required": false
     },
     "status": {
       "type": "enumeration",
@@ -43,8 +37,15 @@
         "draft",
         "published"
       ],
-      "required": true,
       "default": "draft"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "categories": {
+      "via": "projects",
+      "collection": "category"
     }
   }
 }
