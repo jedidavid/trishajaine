@@ -9,12 +9,12 @@ const ThemeToggle = () => {
       {theme === "dark" ? (
         <HiSun
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+          className="text-black dark:text-white text-2xl cursor-pointer"
         />
       ) : (
         <HiMoon
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+          className="text-black dark:text-black text-2xl cursor-pointer"
         />
       )}
     </div>
