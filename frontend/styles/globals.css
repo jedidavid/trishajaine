@@ -29,12 +29,17 @@
   .text-transition {
     @apply hover:text-primary dark:hover:text-primary;
   }
+
   .border-transition {
     @apply hover:border-primary dark:hover:border-primary;
   }
 
   .bg-transition {
     @apply hover:bg-primary dark:hover:bg-primary;
+  }
+
+  .img-transition {
+    @apply hover:opacity-75;
   }
 }
 
