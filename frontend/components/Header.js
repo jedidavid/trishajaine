@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
-
+import { CgMenuGridO } from "react-icons/cg";
+import { HiMenuAlt3 } from "react-icons/hi";
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg mb-3">
-        <div className="container mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-16 navbar-expand-lg mb-3">
+        <div className="w-full px-32 mx-auto flex flex-wrap items-center justify-between">
+          <div className="w-full relative flex justify-between">
             <a
-              className="text-6xl font-heading leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase"
+              className="text-3xl font-heading font-bold leading-none inline-block mr-4 py-2 whitespace-no-wrap"
               href="#"
             >
-              TJ
+              <span className="pl-3">Trisha</span>
+              <span className="block leading-none text-lg">David</span>
             </a>
             <button
-              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="cursor-pointer text-4xl leading-none p-4 block outline-none focus:outline-none bg-light-black text-white"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <i className="fas fa-bars"></i>
+              {/* <CgMenuGridO></CgMenuGridO> */}
+              <HiMenuAlt3 />
             </button>
           </div>
           <div
@@ -28,10 +31,10 @@ const Header = () => {
               (navbarOpen ? " flex" : " hidden")
             }
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
+            {/* <ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75"
                   href="#"
                 >
                   Home
@@ -39,7 +42,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75"
                   href="#"
                 >
                   Projects
@@ -47,7 +50,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75"
                   href="#"
                 >
                   Contact
@@ -61,7 +64,7 @@ const Header = () => {
                   <ThemeToggle />
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </nav>
