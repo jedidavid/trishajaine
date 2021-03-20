@@ -12,11 +12,11 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-white text-black dark:bg-black dark:text-white">
+        <body className="bg-white text-light-black dark:bg-light-black dark:text-white">
           <Main />
           <NextScript />
         </body>

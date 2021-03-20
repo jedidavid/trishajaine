@@ -7,7 +7,8 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1740px",
+      "2xl": "1536px",
+      "3xl": "1820px",
     },
     extend: {
       flex: {
@@ -15,6 +16,7 @@ module.exports = {
       },
       colors: {
         primary: "#143cff",
+        "light-black": "#111111",
       },
     },
     container: {
@@ -22,8 +24,8 @@ module.exports = {
       center: true,
     },
     fontFamily: {
-      heading: ["Bebas Neue", "cursive"],
-      body: ["Open Sans", "sans-seif"],
+      heading: ["Poppins", "sans-serif"],
+      body: ["Lato", "sans-serif"],
     },
   },
   variants: {
