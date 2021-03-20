@@ -10,8 +10,10 @@ const Footer = () => {
               <p className="text-white dark:text-black text-sm pb-2">
                 Don't be shy. Say hi! &#128075;
               </p>
-              <h1 className="text-8xl text-white dark:text-black border-b-2 border-white dark:border-black base-transition text-transition border-transition">
-                <a href="#">tj@email.com</a>
+              <h1 className="text-7xl text-white dark:text-black border-b-2 border-white dark:border-black base-transition text-transition border-transition">
+                <a href="mailto:trishadavidb@gmail.com">
+                  trishadavidb@gmail.com
+                </a>
               </h1>
             </div>
           </div>
