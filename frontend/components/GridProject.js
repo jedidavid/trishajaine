@@ -76,7 +76,7 @@ const GridProject = () => {
           <div className="py-16 text-right">
             <a
               href="#"
-              className="font-heading font-semibold text-4xl leading-none base-transition text-transition"
+              className="font-heading font-semibold text-4xl leading-none base-transition text-transition link-transition"
             >
               View all projects
             </a>
