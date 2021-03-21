@@ -50,6 +50,22 @@
     @apply hover:opacity-75;
   }
 
+  .link-transition {
+    background: linear-gradient(
+        90deg,
+        currentColor calc(100% / 3),
+        transparent 0 calc(200% / 3),
+        currentColor 0
+      )
+      var(--d, 0%) 100% /300% 4px no-repeat;
+    transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .link-transition:hover {
+    --d: 100%;
+  }
+
   .title-decorator::before {
     content: "";
     @apply absolute bottom-0 left-0 h-1 w-full bg-blue-600;
