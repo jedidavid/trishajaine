@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container py-32">
+    <div className="container mx-auto py-32">
       <h2 className="text-5xl">
         <span className="relative pb-2 title-decorator">About</span>
       </h2>

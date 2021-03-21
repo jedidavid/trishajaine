@@ -8,7 +8,7 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
-      "3xl": "1820px",
+      "3xl": "1740px",
     },
     extend: {
       flex: {
@@ -21,7 +21,6 @@ module.exports = {
     },
     container: {
       padding: "1rem",
-      center: true,
     },
     fontFamily: {
       heading: ["Poppins", "sans-serif"],
