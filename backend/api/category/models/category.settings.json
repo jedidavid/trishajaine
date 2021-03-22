@@ -17,8 +17,8 @@
       "unique": true
     },
     "projects": {
-      "collection": "project",
       "via": "categories",
+      "collection": "project",
       "dominant": true
     }
   }
