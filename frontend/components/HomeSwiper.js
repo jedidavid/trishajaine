@@ -20,31 +20,16 @@ const HomeSwiper = ({ gallery }) => {
 
   return (
     <div className="container ml-auto px-0 pb-48">
-      {/* {gallery.image.map((img) => {
-        <div key={img.id}>
-          <p>{img.name}</p>
-          <Image src={img.url} alt="" height={720} width={800} />
-        </div>;
-      })} */}
       <Swiper {...params}>
-        <div>
-          <Image src="/img1-min.jpg" alt="" layout="fill" />
-        </div>
-        <div>
-          <Image src="/img2-min.jpg" alt="" layout="fill" />
-        </div>
-        <div>
-          <Image src="/img3-min.jpg" alt="" layout="fill" />
-        </div>
-        <div>
-          <Image src="/img4-min.jpg" alt="" layout="fill" />
-        </div>
-        <div>
-          <Image src="/img5-min.jpg" alt="" layout="fill" />
-        </div>
-        <div>
-          <Image src="/img6-min.jpg" alt="" layout="fill" />
-        </div>
+        {gallery.image.map((img) => (
+          <div key={img.id}>
+            <Image
+              src={process.env.NEXT_PUBLIC_API_URL + img.url}
+              alt=""
+              layout="fill"
+            />
+          </div>
+        ))}
       </Swiper>
     </div>
   );

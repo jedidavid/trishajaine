@@ -5,7 +5,7 @@ const Seo = (props) => {
   return (
     <>
       <NextSeo
-        title={`${props.title} | ${process.env.PROJECT_NAME}`}
+        title={`${props.title} | ${process.env.NEXT_PUBLIC_PROJECT_NAME}`}
         description="This example uses more of the available config options."
         canonical="https://www.canonical.ie/"
         openGraph={{

@@ -28,7 +28,7 @@ const Header = () => {
               </div>
             </a>
             {/* <button
-              className="cursor-pointer text-4xl leading-none p-4 block outline-none focus:outline-none bg-blue-600 text-white"
+              className="cursor-pointer text-4xl leading-none p-4 block outline-none focus:outline-none bg-light-black text-white"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -44,7 +44,7 @@ const Header = () => {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75 base-transition text-transition"
                   href="#"
                 >
                   Home
@@ -52,7 +52,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75 base-transition text-transition"
                   href="#"
                 >
                   Projects
@@ -60,7 +60,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-lg font-heading font-medium leading-snug hover:opacity-75 base-transition text-transition"
                   href="#"
                 >
                   Contact

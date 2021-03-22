@@ -10,7 +10,6 @@ const Home = ({ gallery }) => {
     return null;
   }
   const Layout = dynamic(() => import("../components/Layout"));
-  console.log(gallery);
   return (
     <>
       <Seo title="Home" />

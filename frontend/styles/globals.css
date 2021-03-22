@@ -72,6 +72,6 @@
   }
 
   .swiper-container {
-    @apply h-[800px];
+    @apply h-[900px];
   }
 }
