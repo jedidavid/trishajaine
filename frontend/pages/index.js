@@ -3,7 +3,7 @@ import Seo from "../components/Seo";
 import dynamic from "next/dynamic";
 import About from "../components/About";
 import HomeSwiper from "../components/HomeSwiper";
-import axios from "axios";
+import { fetchAPI } from "../lib/api";
 
 const Home = ({ gallery }) => {
   if (typeof window === "undefined") {
@@ -23,8 +23,7 @@ const Home = ({ gallery }) => {
 };
 
 export async function getStaticProps() {
-  const response = await axios.get("http://localhost:1337/gallery");
-  const gallery = response.data;
+  const gallery = await fetchAPI("/gallery");
 
   return {
     props: { gallery },
