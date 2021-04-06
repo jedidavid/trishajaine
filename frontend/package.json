@@ -16,6 +16,7 @@
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
     "react-id-swiper": "^4.0.0",
+    "react-markdown": "^5.0.3",
     "swiper": "^6.5.0"
   },
   "devDependencies": {
