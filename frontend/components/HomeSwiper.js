@@ -20,14 +20,14 @@ const HomeSwiper = ({ gallery }) => {
   };
 
   return (
-    <div className="container ml-auto px-0 md:pb-48 pb-24">
+    <div className="container ml-auto px-0 lg:pb-48 pb-24">
       <Swiper {...params}>
         {gallery.image.map((img) => (
           <div key={img.id}>
-            <div className="lg:h-[900px] md:h-[750px] h-[400px] w-full">
+            <div className="lg:h-[900px] md:h-[650px] h-[400px] w-full">
               <Image
                 src={process.env.NEXT_PUBLIC_API_URL + img.url}
-                alt=""
+                alt={img.alt}
                 layout="fill"
                 objectFit="cover"
               />

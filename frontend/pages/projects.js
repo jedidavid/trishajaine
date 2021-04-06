@@ -33,7 +33,7 @@ const Projects = ({ projects, categories }) => {
           </div> */}
         </div>
         <div className="container mx-auto py-16">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-8">
             {projects.map((project) => (
               <Card
                 key={project.id}

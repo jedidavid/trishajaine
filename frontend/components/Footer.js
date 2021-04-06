@@ -1,6 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 import { FaLinkedinIn, FaBehance, FaWhatsapp } from "react-icons/fa";
+import { GlobalContext } from "../pages/_app";
 const Footer = () => {
+  // const { global } = useContext(GlobalContext);
+
+  // console.log(global);
+
   return (
     <>
       <div className="bg-black dark:bg-white">
@@ -18,14 +23,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="container mx-auto py-3">
+        <div className="container mx-auto py-4">
           <div className="flex flex-wrap justify-center">
             <p className="text-sm text-gray-100 dark:text-gray-900 sm:order-1 order-2">
               &copy; 2021 Trisha Jaine David | All Rights Reserved
             </p>
             <div className="flex flex-wrap ml-auto space-x-8 sm:order-2 order-1 sm:w-auto w-full justify-center sm:pb-0 pb-4">
               <a
-                href="#"
+                href={global}
                 className="text-white dark:text-black text-2xl base-transition text-transition"
               >
                 <FaLinkedinIn />

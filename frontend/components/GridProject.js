@@ -9,15 +9,15 @@ const GridProject = ({ projects }) => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex md:flex-nowrap flex-wrap md:space-x-16">
-        <div className="md:w-1/2 w-full">
-          <div className="md:pt-16 md:pb-48 pb-24">
-            <h2 className="md:text-5xl text-4xl">
+      <div className="flex lg:flex-nowrap flex-wrap lg:space-x-16">
+        <div className="lg:w-1/2 w-full">
+          <div className="lg:pt-16 lg:pb-48 pb-24">
+            <h2 className="lg:text-5xl text-4xl">
               <span className="relative pb-2 title-decorator">Projects</span>
             </h2>
           </div>
           {leftProjects.map((project) => (
-            <div className="md:pb-32 pb-12" key={project.id}>
+            <div className="lg:pb-32 pb-12" key={project.id}>
               <Card
                 key={project.id}
                 projectUrl={project.slug}
@@ -28,9 +28,9 @@ const GridProject = ({ projects }) => {
             </div>
           ))}
         </div>
-        <div className="md:w-1/2 w-full">
+        <div className="lg:w-1/2 w-full">
           {rightProjects.map((project) => (
-            <div className="md:pb-32 pb-12" key={project.id}>
+            <div className="lg:pb-32 pb-12" key={project.id}>
               <Card
                 key={project.id}
                 projectUrl={project.slug}
@@ -40,9 +40,9 @@ const GridProject = ({ projects }) => {
               />
             </div>
           ))}
-          <div className="md:py-16 py-6 text-right">
+          <div className="lg:py-16 py-6 text-right">
             <Link href="/projects">
-              <a className="font-heading font-semibold md:text-4xl text-3xl leading-none base-transition text-transition link-transition">
+              <a className="font-heading font-semibold lg:text-4xl text-3xl leading-none base-transition text-transition link-transition">
                 View all projects
               </a>
             </Link>

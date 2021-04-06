@@ -1,20 +1,14 @@
 import React from "react";
-
-const About = () => {
+import ReactMarkdown from "react-markdown";
+const About = (props) => {
   return (
-    <div className="container mx-auto md:py-32 py-24">
-      <h2 className="md:text-5xl text-4xl">
+    <div className="container mx-auto lg:py-32 py-24">
+      <h2 className="lg:text-5xl text-4xl">
         <span className="relative pb-2 title-decorator">About</span>
       </h2>
-      <p className="text-lg py-12">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
-        adipisci magnam sunt. Voluptatum maiores temporibus pariatur dolorem
-        quaerat adipisci commodi culpa molestias amet hic totam illum tenetur,
-        minus asperiores eos. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Facere vero quasi pariatur, exercitationem maxime debitis tempore
-        consequuntur accusantium. Architecto illo animi aliquid veritatis, eius
-        rerum exercitationem consequuntur repudiandae vitae omnis!
-      </p>
+      <div className="py-12 text-lg">
+        <ReactMarkdown source={props.about.description} escapeHtml={false} />
+      </div>
     </div>
   );
 };

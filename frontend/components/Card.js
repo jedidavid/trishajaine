@@ -10,8 +10,8 @@ const Card = (props) => {
           <Image
             src={process.env.NEXT_PUBLIC_API_URL + props.imgUrl}
             alt={props.imgAlt}
-            width={800}
-            height={800}
+            width={1000}
+            height={650}
             layout="responsive"
             className="base-transition img-transition"
           />

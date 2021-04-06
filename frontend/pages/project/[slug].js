@@ -25,13 +25,13 @@ const Project = ({ project, categories }) => {
 
   return (
     <>
-      <Seo title="Project Name" />
+      <Seo title={project.title} />
       <Layout>
         <div className="container mx-auto">
           <Swiper {...params}>
             {project.image.map((img) => (
               <div key={img.id}>
-                <div className="lg:h-[900px] md:h-[750px] h-[400px] w-full">
+                <div className="lg:h-[900px] md:h-[650px] h-[400px] w-full">
                   <Image
                     src={process.env.NEXT_PUBLIC_API_URL + img.url}
                     alt=""
@@ -43,22 +43,22 @@ const Project = ({ project, categories }) => {
             ))}
           </Swiper>
         </div>
-        <div className="container mx-auto md:py-32 py-24">
-          <div className="w-full max-w-5xl mx-auto">
+        <div className="container mx-auto lg:py-32 py-24">
+          <div className="w-full max-w-7xl mx-auto">
             <div className="flex flex-wrap space-y-8">
-              <div className="w-full">
-                <h1 className="md:text-5xl text-4xl">{project.title}</h1>
+              <div className="w-full order-1">
+                <h1 className="lg:text-5xl text-4xl">{project.title}</h1>
                 <span>
                   {project.categories.map((category, index) => (
                     <Fragment key={index}>{category.name}</Fragment>
                   ))}
                 </span>
               </div>
-              <div className="md:w-1/2 w-full">
+              <div className="lg:w-1/2 w-full lg:order-2 order-3">
                 <p>{project.description}</p>
               </div>
-              <div className="md:w-1/2 w-full">
-                <div className="max-w-sm mx-auto">
+              <div className="lg:w-1/2 w-full lg:order-3 order-2">
+                <div className="lg:max-w-sm mx-auto">
                   <ul>
                     <li>Size: {project.size}</li>
                     <li>Year: {project.year}</li>
