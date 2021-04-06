@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import Seo from "../../components/Seo";
 import dynamic from "next/dynamic";
 import { fetchAPI } from "../../lib/api";
@@ -19,6 +19,7 @@ const Project = ({ project, categories }) => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    autoHeight: true,
     // containerClass: "custom-swiper-container swiper-container",
   };
 
@@ -30,34 +31,39 @@ const Project = ({ project, categories }) => {
           <Swiper {...params}>
             {project.image.map((img) => (
               <div key={img.id}>
-                <Image
-                  src={process.env.NEXT_PUBLIC_API_URL + img.url}
-                  alt=""
-                  layout="fill"
-                />
+                <div className="lg:h-[900px] md:h-[750px] h-[400px] w-full">
+                  <Image
+                    src={process.env.NEXT_PUBLIC_API_URL + img.url}
+                    alt=""
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
               </div>
             ))}
           </Swiper>
         </div>
-        <div className="container mx-auto py-32">
+        <div className="container mx-auto md:py-32 py-24">
           <div className="w-full max-w-5xl mx-auto">
-            <div className="flex flex-wrap -mx-8">
-              <div className="w-full px-8">
-                <h1 className="text-5xl">{project.title}</h1>
+            <div className="flex flex-wrap space-y-8">
+              <div className="w-full">
+                <h1 className="md:text-5xl text-4xl">{project.title}</h1>
                 <span>
                   {project.categories.map((category, index) => (
-                    <React.Fragment key={index}>{category.name}</React.Fragment>
+                    <Fragment key={index}>{category.name}</Fragment>
                   ))}
                 </span>
               </div>
-              <div className="w-1/2 px-8">
+              <div className="md:w-1/2 w-full">
                 <p>{project.description}</p>
               </div>
-              <div className="w-1/2 px-8">
-                <ul>
-                  <li>Size: {project.size}</li>
-                  <li>Year: {project.year}</li>
-                </ul>
+              <div className="md:w-1/2 w-full">
+                <div className="max-w-sm mx-auto">
+                  <ul>
+                    <li>Size: {project.size}</li>
+                    <li>Year: {project.year}</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

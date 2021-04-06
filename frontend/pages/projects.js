@@ -24,15 +24,15 @@ const Projects = ({ projects, categories }) => {
       <Seo title="Projects" />
       <Layout>
         <div className="container mx-auto">
-          <h1 className="text-5xl">Projects</h1>
-          <div className="py-8">
+          {/* <h1 className="text-6xl">Projects</h1> */}
+          {/* <div className="py-8">
             {categories.map((category, i) => [
               i > 0 && " / ",
               <button key={i}>{category.name}</button>,
             ])}
-          </div>
+          </div> */}
         </div>
-        <div className="container mx-auto py-32">
+        <div className="container mx-auto py-16">
           <div className="grid grid-cols-3 gap-8">
             {projects.map((project) => (
               <Card
@@ -40,6 +40,7 @@ const Projects = ({ projects, categories }) => {
                 projectUrl={project.slug}
                 imgUrl={project.image[0].formats.large.url}
                 imgAlt={project.image[0].alt}
+                title={project.title}
               />
             ))}
           </div>

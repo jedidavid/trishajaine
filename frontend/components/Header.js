@@ -6,7 +6,7 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-24 navbar-expand-lg mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between md:py-24 py-12 navbar-expand-lg mb-3">
         <div className="container mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between">
             <Link href="/">
@@ -27,43 +27,49 @@ const Header = () => {
                 </div>
               </a>
             </Link>
-            {/* <button
-              className="cursor-pointer text-4xl leading-none p-4 block outline-none focus:outline-none bg-light-black text-white"
+            <button
+              className="block lg:hidden cursor-pointer text-4xl leading-none p-4 outline-none focus:outline-none bg-light-black dark:bg-white text-white dark:text-light-black"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
               <HiMenuAlt3 />
-            </button> */}
+            </button>
           </div>
           <div
             className={
-              "lg:flex flex-grow items-center" +
+              "lg:flex flex-grow items-center lg:justify-items-auto justify-center" +
               (navbarOpen ? " flex" : " hidden")
             }
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
               <li className="nav-item">
-                <a
-                  className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
-                  href="#"
-                >
-                  Home
-                </a>
+                <Link href="/">
+                  <a className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition">
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/projects">
+                  <a className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition">
+                    Projects
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a
                   className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
-                  href="#"
-                >
-                  Projects
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
-                  href="#"
+                  href="#contact"
                 >
                   Contact
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
+                  href="#"
+                >
+                  CV
                 </a>
               </li>
               <li className="nav-item">

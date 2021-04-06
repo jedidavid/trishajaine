@@ -15,19 +15,23 @@ const HomeSwiper = ({ gallery }) => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    autoHeight: true,
     // containerClass: "custom-swiper-container swiper-container",
   };
 
   return (
-    <div className="container ml-auto px-0 pb-48">
+    <div className="container ml-auto px-0 md:pb-48 pb-24">
       <Swiper {...params}>
         {gallery.image.map((img) => (
           <div key={img.id}>
-            <Image
-              src={process.env.NEXT_PUBLIC_API_URL + img.url}
-              alt=""
-              layout="fill"
-            />
+            <div className="lg:h-[900px] md:h-[750px] h-[400px] w-full">
+              <Image
+                src={process.env.NEXT_PUBLIC_API_URL + img.url}
+                alt=""
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           </div>
         ))}
       </Swiper>

@@ -10,11 +10,17 @@ const Card = (props) => {
           <Image
             src={process.env.NEXT_PUBLIC_API_URL + props.imgUrl}
             alt={props.imgAlt}
-            width={600}
-            height={500}
+            width={800}
+            height={800}
             layout="responsive"
             className="base-transition img-transition"
           />
+        </a>
+      </Link>
+      <Link href={`/project/${props.projectUrl}`}>
+        <a className="cursor-pointer text-xl font-heading font-medium flex items-center py-3 base-transition text-transition">
+          <span className="h-1 w-8 bg-blue-600 mr-2"></span>
+          {props.title}
         </a>
       </Link>
     </div>

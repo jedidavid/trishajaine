@@ -2,11 +2,11 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container mx-auto py-32">
-      <h2 className="text-5xl">
+    <div className="container mx-auto md:py-32 py-24">
+      <h2 className="md:text-5xl text-4xl">
         <span className="relative pb-2 title-decorator">About</span>
       </h2>
-      <p className="text-lgp py-12">
+      <p className="text-lg py-12">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
         adipisci magnam sunt. Voluptatum maiores temporibus pariatur dolorem
         quaerat adipisci commodi culpa molestias amet hic totam illum tenetur,
