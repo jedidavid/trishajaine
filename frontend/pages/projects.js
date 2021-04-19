@@ -4,12 +4,12 @@ import dynamic from "next/dynamic";
 import Card from "../components/Card";
 import { fetchAPI } from "../lib/api";
 
-const Projects = ({ projects, categories }) => {
+const Projects = ({ projects, categories, global }) => {
   const Layout = dynamic(() => import("../components/Layout"));
 
-  const [categoryId, setCategoryId] = useState(null);
+  // const [categoryId, setCategoryId] = useState(null);
 
-  console.log(setCategoryId);
+  // console.log(setCategoryId);
 
   // const filterCategory = (catId) => {
   //   {
@@ -22,7 +22,7 @@ const Projects = ({ projects, categories }) => {
   return (
     <>
       <Seo title="Projects" />
-      <Layout>
+      <Layout global={global}>
         <div className="container mx-auto">
           {/* <h1 className="text-6xl">Projects</h1> */}
           {/* <div className="py-8">
@@ -50,13 +50,14 @@ const Projects = ({ projects, categories }) => {
   );
 };
 export async function getStaticProps() {
-  const [projects, categories] = await Promise.all([
+  const [projects, categories, global] = await Promise.all([
     fetchAPI("/projects"),
     fetchAPI("/categories"),
+    fetchAPI("/global"),
   ]);
 
   return {
-    props: { projects, categories },
+    props: { projects, categories, global },
     revalidate: 1,
   };
 }

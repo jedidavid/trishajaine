@@ -6,7 +6,7 @@ import Swiper from "react-id-swiper";
 import Image from "next/image";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import "swiper/swiper.min.css";
-const Project = ({ project, categories }) => {
+const Project = ({ project, categories, global }) => {
   const Layout = dynamic(() => import("../../components/Layout"));
 
   SwiperCore.use([Navigation, Autoplay]);
@@ -26,8 +26,8 @@ const Project = ({ project, categories }) => {
   return (
     <>
       <Seo title={project.title} />
-      <Layout>
-        <div className="container mx-auto">
+      <Layout global={global}>
+        <div className="container mx-auto md:px-4 px-0">
           <Swiper {...params}>
             {project.image.map((img) => (
               <div key={img.id}>
@@ -43,9 +43,9 @@ const Project = ({ project, categories }) => {
             ))}
           </Swiper>
         </div>
-        <div className="container mx-auto lg:py-32 py-24">
+        <div className="container mx-auto lg:py-32 py-16">
           <div className="w-full max-w-7xl mx-auto">
-            <div className="flex flex-wrap space-y-8">
+            <div className="flex flex-wrap lg:space-y-8 space-y-4">
               <div className="w-full order-1">
                 <h1 className="lg:text-5xl text-4xl">{project.title}</h1>
                 <span>
@@ -87,12 +87,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const projects = await fetchAPI(`/projects?slug=${params.slug}`);
-
-  const categories = await fetchAPI(`/categories`);
+  const [projects, categories, global] = await Promise.all([
+    await fetchAPI(`/projects?slug=${params.slug}`),
+    await fetchAPI(`/categories`),
+    await fetchAPI("/global"),
+  ]);
 
   return {
-    props: { project: projects[0], categories },
+    props: { project: projects[0], categories, global },
     revalidate: 1,
   };
 }

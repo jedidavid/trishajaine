@@ -5,7 +5,7 @@ import About from "../components/About";
 import HomeSwiper from "../components/HomeSwiper";
 import { fetchAPI } from "../lib/api";
 
-const Home = ({ gallery, projects, about }) => {
+const Home = ({ gallery, projects, about, global }) => {
   if (typeof window === "undefined") {
     return null;
   }
@@ -13,7 +13,7 @@ const Home = ({ gallery, projects, about }) => {
   return (
     <>
       <Seo title="Home" />
-      <Layout>
+      <Layout global={global}>
         <HomeSwiper gallery={gallery} />
         <GridProject projects={projects} />
         <About about={about} />
@@ -23,14 +23,15 @@ const Home = ({ gallery, projects, about }) => {
 };
 
 export async function getStaticProps() {
-  const [gallery, projects, about] = await Promise.all([
+  const [gallery, projects, about, global] = await Promise.all([
     fetchAPI("/gallery"),
     fetchAPI("/projects?_limit=4"),
     fetchAPI("/about"),
+    fetchAPI("/global"),
   ]);
 
   return {
-    props: { gallery, projects, about },
+    props: { gallery, projects, about, global },
     revalidate: 1,
   };
 }
