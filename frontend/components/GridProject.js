@@ -21,7 +21,7 @@ const GridProject = ({ projects }) => {
               <Card
                 key={project.id}
                 projectUrl={project.slug}
-                imgUrl={project.image[0].formats.large.url}
+                imgUrl={project.image[0].formats.large}
                 imgAlt={project.image[0].alt}
                 title={project.title}
               />
@@ -34,7 +34,7 @@ const GridProject = ({ projects }) => {
               <Card
                 key={project.id}
                 projectUrl={project.slug}
-                imgUrl={project.image[0].formats.large.url}
+                imgUrl={project.image[0].formats.large}
                 imgAlt={project.image[0].alt}
                 title={project.title}
               />
