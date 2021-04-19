@@ -68,7 +68,7 @@ const Header = (props) => {
                 {props.cv ? (
                   <a
                     className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
-                    href={process.env.NEXT_PULIC_API_URL + props.cv}
+                    href={process.env.NEXT_PUBLIC_API_URL + props.cv}
                   >
                     CV
                   </a>
