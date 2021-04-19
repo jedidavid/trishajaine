@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "trishajaine.com", "cloudinary.com"],
   },
 };
