@@ -3,6 +3,7 @@ import Swiper from "react-id-swiper";
 import Image from "next/image";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import "swiper/swiper.min.css";
+import { getStrapiMedia } from "../lib/media";
 
 const HomeSwiper = ({ gallery }) => {
   SwiperCore.use([Navigation, Autoplay]);
@@ -26,7 +27,7 @@ const HomeSwiper = ({ gallery }) => {
           <div key={img.id}>
             <div className="lg:h-[900px] md:h-[650px] h-[400px] w-full">
               <Image
-                src={process.env.NEXT_PUBLIC_API_URL + img.url}
+                src={getStrapiMedia(img)}
                 alt={img.alt}
                 layout="fill"
                 objectFit="cover"

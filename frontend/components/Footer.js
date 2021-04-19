@@ -1,6 +1,5 @@
 import { FaLinkedinIn, FaBehance, FaWhatsapp } from "react-icons/fa";
 const Footer = (props) => {
-  console.log(props.email);
   return (
     <>
       <div className="bg-black dark:bg-white">

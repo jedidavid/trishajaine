@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getStrapiMedia } from "../lib/media";
 
 const Card = (props) => {
   return (
@@ -8,7 +9,7 @@ const Card = (props) => {
       <Link href={`/project/${props.projectUrl}`}>
         <a>
           <Image
-            src={process.env.NEXT_PUBLIC_API_URL + props.imgUrl}
+            src={getStrapiMedia(props.imgUrl)}
             alt={props.imgAlt}
             width={1000}
             height={650}
