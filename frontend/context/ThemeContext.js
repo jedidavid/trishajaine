@@ -1,5 +1,3 @@
-import React from "react";
-
 const getInitialTheme = () => {
   if (typeof window !== "undefined" && window.localStorage) {
     const storedPreferences = window.localStorage.getItem("color-theme");
