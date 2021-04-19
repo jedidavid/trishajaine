@@ -6,7 +6,7 @@ import Swiper from "react-id-swiper";
 import Image from "next/image";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import "swiper/swiper.min.css";
-import { getStrapiMedia } from "../lib/media";
+import { getStrapiMedia } from "../../lib/media";
 
 const Project = ({ project, categories, global }) => {
   const Layout = dynamic(() => import("../../components/Layout"));
