@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ThemeToggle from "./ThemeToggle";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
-const Header = () => {
+const Header = (props) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between md:py-24 py-12 navbar-expand-lg mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between md:py-24 py-10 navbar-expand-lg mb-3">
         <div className="container mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between">
             <Link href="/">
@@ -65,20 +65,24 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
-                  href="#"
-                >
-                  CV
-                </a>
+                {props.cv ? (
+                  <a
+                    className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
+                    href={process.env.NEXT_PULIC_API_URL + props.cv}
+                  >
+                    CV
+                  </a>
+                ) : (
+                  ""
+                )}
               </li>
               <li className="nav-item">
-                <a
+                <span
                   className="px-4 py-2 flex items-center leading-snug"
                   href="#"
                 >
                   <ThemeToggle />
-                </a>
+                </span>
               </li>
             </ul>
           </div>

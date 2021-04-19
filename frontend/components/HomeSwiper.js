@@ -20,7 +20,7 @@ const HomeSwiper = ({ gallery }) => {
   };
 
   return (
-    <div className="container ml-auto px-0 lg:pb-48 pb-24">
+    <div className="container ml-auto px-0 lg:pb-48 pb-16">
       <Swiper {...params}>
         {gallery.image.map((img) => (
           <div key={img.id}>

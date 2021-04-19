@@ -2,12 +2,17 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, global }) => {
   return (
     <div className="page">
-      <Header />
+      <Header cv={global.cv.url} />
       <main>{children}</main>
-      <Footer />
+      <Footer
+        email={global.email}
+        phone={global.phone}
+        linkedin={global.linkedin}
+        behance={global.behance}
+      />
     </div>
   );
 };

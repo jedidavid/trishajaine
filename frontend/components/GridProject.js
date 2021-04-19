@@ -11,7 +11,7 @@ const GridProject = ({ projects }) => {
     <div className="container mx-auto">
       <div className="flex lg:flex-nowrap flex-wrap lg:space-x-16">
         <div className="lg:w-1/2 w-full">
-          <div className="lg:pt-16 lg:pb-48 pb-24">
+          <div className="lg:pt-16 lg:pb-48 pb-16">
             <h2 className="lg:text-5xl text-4xl">
               <span className="relative pb-2 title-decorator">Projects</span>
             </h2>
