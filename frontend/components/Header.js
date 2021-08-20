@@ -1,7 +1,9 @@
 import React from "react";
-import ThemeToggle from "./ThemeToggle";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
+import { getStrapiMedia } from "../lib/media";
+import ThemeToggle from "./ThemeToggle";
+
 const Header = (props) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -68,7 +70,7 @@ const Header = (props) => {
                 {props.cv ? (
                   <a
                     className="px-4 py-2 flex items-center text-lg font-body leading-snug hover:opacity-75 base-transition text-transition"
-                    href={process.env.NEXT_PUBLIC_API_URL + props.cv.url}
+                    href={getStrapiMedia(props.cv)}
                   >
                     CV
                   </a>
