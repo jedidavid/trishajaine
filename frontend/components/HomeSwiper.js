@@ -16,7 +16,6 @@ const HomeSwiper = ({ gallery }) => {
       prevEl: ".swiper-button-prev",
     },
     autoHeight: true,
-    // containerClass: "custom-swiper-container swiper-container",
   };
 
   return (
@@ -24,12 +23,13 @@ const HomeSwiper = ({ gallery }) => {
       <Swiper {...params}>
         {gallery.image.map((img) => (
           <div key={img.id}>
-            <div className="lg:h-[900px] md:h-[650px] h-[400px] w-full">
+            <div className="w-full">
               <Image
                 src={getStrapiMedia(img)}
-                alt={img.alt}
-                layout="fill"
-                objectFit="cover"
+                alt={img.alternativeText || img.name}
+                width={1000}
+                height={600}
+                layout="responsive"
               />
             </div>
           </div>

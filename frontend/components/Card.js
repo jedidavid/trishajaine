@@ -10,8 +10,8 @@ const Card = (props) => {
           <Image
             src={getStrapiMedia(props.imgUrl)}
             alt={props.imgAlt}
-            width={1000}
-            height={650}
+            width={850}
+            height={550}
             layout="responsive"
             className="base-transition img-transition"
           />

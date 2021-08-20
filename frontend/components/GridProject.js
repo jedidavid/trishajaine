@@ -20,7 +20,7 @@ const GridProject = ({ projects }) => {
                 key={project.id}
                 projectUrl={project.slug}
                 imgUrl={project.image[0].formats.large}
-                imgAlt={project.image[0].alt}
+                imgAlt={project.image[0].alternativeText || project.title}
                 title={project.title}
               />
             </div>
@@ -33,7 +33,7 @@ const GridProject = ({ projects }) => {
                 key={project.id}
                 projectUrl={project.slug}
                 imgUrl={project.image[0].formats.large}
-                imgAlt={project.image[0].alt}
+                imgAlt={project.image[0].alternativeText || project.title}
                 title={project.title}
               />
             </div>
